@@ -18,6 +18,8 @@ spec:
       - name: php-redis
         image: us-docker.pkg.dev/google-samples/containers/gke/gb-frontend:v5
         env:
+          - name:GET_HOSTS_FROM
+            value: env
           - name: REDIS_LEADER_SERVICE_HOST 
             value: "${REDIS_MASTER_SERVICE_HOST}" 
 
