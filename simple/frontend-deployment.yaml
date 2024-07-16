@@ -21,9 +21,9 @@ spec:
           - name: GET_HOSTS_FROM
             value: env
           - name: REDIS_LEADER_SERVICE_HOST 
-            value: "${REDIS_MASTER_SERVICE_HOST}" 
+            value: redis-master
           - name: REDIS_FOLLOWER_SERVICE_HOST 
-            value: "${REDIS_SLAVE_SERVICE_HOST}" 
+            value: redis-slave 
         resources:
           requests:
             cpu: 100m
