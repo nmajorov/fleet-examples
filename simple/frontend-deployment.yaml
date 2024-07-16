@@ -17,6 +17,12 @@ spec:
       containers:
       - name: php-redis
         image: us-docker.pkg.dev/google-samples/containers/gke/gb-frontend:v5
+        env:
+          - name: REDIS_LEADER_SERVICE_HOST 
+            value: "$(REDIS_MASTER_SERVICE_HOST)" 
+
+          - name: REDIS_LEADER_SERVICE_HOST 
+            value: "$(REDIS_FOLLOWER_SERVICE_HOST)" 
         resources:
           requests:
             cpu: 100m
