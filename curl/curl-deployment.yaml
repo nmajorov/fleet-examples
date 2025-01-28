@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: curl
+spec:
+  selector:
+    matchLabels:
+      app: guestbook
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: guestbook
+        tier: curl
+    spec:
+      containers:
+      - name: niko-culr
+        image: docker.io/nmajorov/curl:7.45
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        ports:
+         - containerPort: 8080
