@@ -23,5 +23,10 @@ spec:
           requests:
             cpu: 100m
             memory: 100Mi
+       healthcheck:
+          test: ["CMD", "redis-cli ping | grep PONG"]
+          interval: 1s
+          timeout: 3s
+          retries: 10
         ports:
         - containerPort: 6379
