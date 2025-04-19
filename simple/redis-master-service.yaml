@@ -10,6 +10,12 @@ spec:
   ports:
   - port: 6379
     targetPort: 6379
+  healthcheck:
+    test: ["CMD", "redis-cli", "ping"]
+    interval: 5s
+    timeout: 2s
+    retries: 10
+    start_period: 5s
   selector:
     app: redis
     role: master
