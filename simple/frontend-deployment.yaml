@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: go-redis
-        image: docker.io/nmajorov/guestbook:v2
+        image: docker.io/nmajorov/guestbook:v3
         env:
           - name: GET_HOSTS_FROM
             value: env
