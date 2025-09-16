@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: master
-          image: docker.io/redis:7.4
+          image: docker.io/agoel5/redismaster:latest
           resources:
             requests:
               cpu: 100m
