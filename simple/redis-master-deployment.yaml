@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: master
-          image: docker.io/agoel5/redismaster:latest
+          image: gcr.io/google_samples/gb-redisslave:v2
           resources:
             requests:
               cpu: 100m
